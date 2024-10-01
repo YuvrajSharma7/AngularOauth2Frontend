@@ -1,0 +1,31 @@
+<div class="login-container">
+  <div class="login-left">
+    <h2>Login! 👋</h2>
+    <p>How do I get started?</p>
+    <button class="btn btn-google" (click)="loginWithGoogle()">Sign in with Google</button>
+    <p>or Login with Email</p>
+    <form (submit)="signIn(userData)">
+      <div class="form-group">
+        <label for="email">Email : </label>
+        <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="userData.email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password : </label>
+        <input type="password" name="password" class="form-control" placeholder="********"
+          [(ngModel)]="userData.password">
+      </div>
+      <div class="text-center">
+        <input type="submit" class="btn btn-my" value="Sign In">
+      </div>
+    </form>
+    <p>Don't have an account? <a routerLink="/signup">Sign Up Now</a></p>
+  </div>
+  <div class="login-right">
+    <div class="login-info">
+      <h3>Why should I login?</h3>
+      <p>By logging in, you can access your personal dashboard, where you can manage your account, view your profile,
+        and much more.</p>
+      <img src="assets/example.jpg" alt="Dashboard example">
+    </div>
+  </div>
+</div>
